@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --ff-body: 'Inter', sans-serif;
+
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-xsml: 0.7rem;
+  --fs-sml: 0.9rem;
+  --fs-lg: 3rem;
+
+  --main-bg-color: #181818;
+  --clr-accent: #9900F0;
+  --clr-light: #fff;
+  --clr-info: #666;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-300);
+  background-color: var(--main-bg-color);
+  color: var(--clr-light);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-300);
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  flex-direction: row;
+}
+
+.left {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Sign in */
+.signin {
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin .form {
+  width: 80%;
+  padding-bottom: 3rem;
+}
+
+.signin .logo {
+  margin-bottom: 8vh;
+}
+
+.signin .logo img {
+  width: 400px;
+}
+
+.signin label {
+  font-size: var(--fs-sml);
+  line-height: 2rem;
+  font-weight: var(--fw-500);
+  display: block
+}
+
+.signin .text-input {
+  background-color: #181818;
+  color: var(--clr-info);
+  border: 1px var(--clr-info) solid;
+  border-radius: 2px;
+  width: 100%;
+  height: 2.7rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.2em;
+}
+
+.signin .text-input:focus {
+  outline: 1px var(--clr-accent) solid;
+}
+
+.signin .primary-btn {
+  width: 100%;
+}
+
+.signin .secondary-btn,
+.or,
+.links {
+  width: 60%;
+}
+
+.signin .links {
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.signin .links a {
+  /* display: block; */
+
+  color: var(--clr-accent);
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.signin .links a:hover {
+  text-decoration: underline;
+}
+
+.signin .or {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+
+.signin .or .bar {
+  flex: auto;
+  border: none;
+  height: 1px;
+  background: var(--clr-info);
+}
+
+.signin .or span {
+  color: var(--clr-info);
+  padding: 0 0.8rem;
+}
+
+/* Showcase */
+.showcase {
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/img/background.jpg') no-repeat center center / cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.showcase .showcase__text {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-700);
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.showcase .secondary-btn {
+  width: 37%;
+  margin: auto;
+  background: var(--clr-accent);
+}
+
+.showcase .secondary-btn:hover {
+  --invert: #181818;
+  color: var(--invert);
+  opacity: 1;
+}
+
+/* Footer */
+.main-footer {
+  color: var(--clr-info);
+  text-align: center;
+  font-size: var(--fs-xsml);
+  max-width: 80%;
+  padding-top: 4rem;
+}
+
+.main-footer p {
+  margin-bottom: 0.5rem;
+}
+
+.main-footer a {
+  color: var(--clr-light);
+  text-decoration: none;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.primary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+.primary-btn:active {
+  opacity: 0.3;
+}
+
+.secondary-btn {
+  --color: #333;
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-700);
+  background: var(--color);
+  color: var(--clr-light);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.secondary-btn:hover {
+  opacity: 0.7;
+}
+
+.secondary-btn:active {
+  opacity: 0.3;
+}
+
+/* Media Queries */
+
+@media(min-width: 1200px) {
+  .left {
+    flex: 4;
+  }
+
+  .right {
+    flex: 6;
+  }
+}
+
+@media(max-width:768px) {
+  body {
+    overflow: auto;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    justify-content: start;
+    margin-top: 10vh;
+  }
+
+  .signin .logo {
+    margin-bottom: 2vh;
+  }
+
+  .signin .text-input {
+    margin-bottom: 0.7em;
+  }
+
+  .main-footer {
+    padding-top: 1rem;
+  }
+}

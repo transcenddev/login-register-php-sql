@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="left flex">
+        <div class="signin flex">
+          <div class="logo-container">
+            <!-- <p class="logo">Logo</p> -->
+            <img class="logo" src="./assets/img/logo.png" alt="" />
+          </div>
+
+          <form action="./login.php" method="post" class="form-container">
+            <h1 class="form__title">Login</h1>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="text-input"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="text-input"
+                name="password"
+                id="password"
+                required
+              />
+            </div>
+            <div class="flex">
+              <div class="remember">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+                <label for="rememberMe">Remember me</label>
+              </div>
+              <div class="forgot">
+                <a rel="noopener noreferrer" href="#" class="form__links"
+                  >Forgot Password?</a
+                >
+              </div>
+            </div>
+            <div class="input-container">
+              <input
+                type="submit"
+                class="primary-btn"
+                value="Sign in"
+                name="signin"
+              />
+            </div>
+          </form>
+          <span class="bottom-text flex">
+            <p>Already have an account?</p>
+            <a href="./register.html" class="form__links">Sign Up</a>
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="showcase-container">
+          <div class="showcase-content">
+            <p class="showcase__title">R 키스 해줘</p>
+            <p class="showcase__desc">
+              a dynamic and innovative organization that specializes in
+              providing a wide range of products and services to its clients.
+              With a strong focus on customer satisfaction, R Company has
+              established itself as a leader in the industry by providing
+              quality solutions that meet the unique needs of its clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
